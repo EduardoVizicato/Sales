@@ -4,6 +4,7 @@ import { CategoryServicesService } from '../services/category-services.service';
 import { AddCategoryRequest } from '../models/add-category-request.models';
 import { response } from 'express';
 import { AddCategoryComponent } from '../add-category/add-category.component';
+import { Category } from '../models/Category';
 
 @Component({
   selector: 'app-category-list',
@@ -14,7 +15,7 @@ import { AddCategoryComponent } from '../add-category/add-category.component';
 })
 export class CategoryListComponent implements OnInit {
 
-  categories? : AddCategoryRequest
+  categories? : Category[];
 
   constructor(private categoryService: CategoryServicesService){}
 

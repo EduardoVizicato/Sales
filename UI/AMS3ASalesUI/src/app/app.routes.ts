@@ -6,5 +6,6 @@ import { AddCategoryComponent } from './features/category/add-category/add-categ
 export const routes: Routes = [
     {path: "navbar", component: NavbarComponent},
     {path: "admin/categories", component: CategoryListComponent},
-    {path: "admin/category/add", component: AddCategoryComponent}
+    {path: "admin/category/add", component: AddCategoryComponent},
+    {path: "categorylist", component: CategoryListComponent}
 ];
