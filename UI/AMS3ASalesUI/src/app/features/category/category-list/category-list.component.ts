@@ -1,22 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CategoryServicesService } from '../services/category-services.service';
+import { AddCategoryRequest } from '../models/add-category-request.models';
+import { response } from 'express';
+import { AddCategoryComponent } from '../add-category/add-category.component';
 
 @Component({
   selector: 'app-category-list',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, AddCategoryComponent],
   templateUrl: './category-list.component.html',
   styleUrl: './category-list.component.css'
 })
 export class CategoryListComponent implements OnInit {
-  constructor(private categoryService: CategoryService){}
+
+  categories? : AddCategoryRequest
+
+  constructor(private categoryService: CategoryServicesService){}
 
   ngOnInit(): void {
-    this.CategoryService.getCategory()
-    .subscribe({
-      next: (response) => {
-        this.categories = response;
-      }
-    });
+      this.categoryService.getCategory()
+      .subscribe({
+        next: (response) => {
+          this.categories = response;
+        }
+      });
   }
 }

@@ -12,7 +12,9 @@ export class AddCategoryComponent {
   model: AddCategoryRequest;
   constructor(){
     this.model = {
-      descrition: ''
+      id: '',
+      description: 'ams',
+      imageUrl: ''
     };
   }
   
