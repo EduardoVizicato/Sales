@@ -8,6 +8,15 @@ import { RouterLink } from '@angular/router';
   templateUrl: './category-list.component.html',
   styleUrl: './category-list.component.css'
 })
-export class CategoryListComponent {
+export class CategoryListComponent implements OnInit {
+  constructor(private categoryService: CategoryService){}
 
+  ngOnInit(): void {
+    this.CategoryService.getAllCategories()
+    .subscribe({
+      next: (response) => {
+        this.categories = response;
+      }
+    });
+  }
 }
