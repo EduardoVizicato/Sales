@@ -7,5 +7,5 @@ export const routes: Routes = [
     {path: "navbar", component: NavbarComponent},
     {path: "admin/categories", component: CategoryListComponent},
     {path: "admin/category/add", component: AddCategoryComponent},
-    {path: "categorylist", component: CategoryListComponent}
+    {path: "admin/category/categorylist", component: CategoryListComponent}
 ];
