@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="mt-3"> Produtos </h1>
+    <div class="d-flex justify-content-end mt-3"></div>
+    <a routerLink="/admin/category/add" class="btn btn-primary">Novo Produto</a>
+</div>
+<div class="container">
+    <ng-container *ngIf="products">
+        <table class="table table-bordered mt-03">
+            <thead>
+                <tr>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{products.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</div>
