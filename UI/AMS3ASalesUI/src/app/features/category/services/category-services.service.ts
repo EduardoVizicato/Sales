@@ -16,4 +16,12 @@ export class CategoryServicesService {
       "https://localhost:7119/api/Categories"
     );
   }
+
+  addCategory(categoryRequest: AddCategoryRequest): Observable <AddCategoryRequest>{
+    console.log("Entrou na service");
+    console.log(categoryRequest);
+     return this.http.post<AddCategoryRequest>(
+      "https://localhost:7119/api/Categories", categoryRequest
+    );
+  }
 }
