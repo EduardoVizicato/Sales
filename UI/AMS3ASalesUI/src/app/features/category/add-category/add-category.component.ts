@@ -1,10 +1,10 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { AddCategoryRequest } from '../models/add-category-request.models';
-import { core } from '@angular/compiler';
 import { CategoryServicesService } from '../services/category-services.service';
 import { Router, response } from 'express';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-category',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CategoryListComponent } from '../../features/category/category-list/category-list.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
